@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.logo:hover {
+    color: #ff6347; 
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #ff6347; 
+    transform: scale(1.1);
+}
+
+section.Home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.home-img {
+    flex: 1;
+    text-align: center;
+}
+
+.home-img img {
+    max-width: 100%; 
+    height: auto; 
+    width: 300px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.home-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.home-content h1 span {
+    color: #ff6347; 
+}
+
+.typing-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden; 
+    white-space: nowrap; 
+}
+
+.typing-text span {
+    display: inline-block; 
+    border-right: 2px solid #333;
+    animation: blink 0.7s infinite;
+}
+
+.typing-text span::before {
+    content: "Mahasiswa";
+    color: #333;
+    animation: words 10s infinite; 
+}
+
+.typing-text span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid #333;
+    right: -8px;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    0%, 100% {
+        border-left: 3px solid transparent; 
+    }
+    50% {
+        border-left: 3px solid #333; 
+    }
+}
+
+@keyframes words {
+    0% {
+        content: "Mahasiswa";
+    }
+    20% {
+        content: "IT Enthusiast";
+    }
+    40% {
+        content: "Hamba Allah";
+    }
+    60% {
+        content: "Anak Sholeh";
+    }
+    80% {
+        content: "Anime";
+    }
+    100% {
+        content: "Manusia biasa";
+    }
+}
+
+@keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #333; }
+}
+.home-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff6347; 
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    section.Home {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .home-img {
+        margin-bottom: 20px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 16px;
+    }
+}
+
+
+.portfolio-images {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}
+
+.portfolio-item {
+    flex: 1 1 30%; 
+    margin: 10px; 
+    text-align: center; 
+}
+
+.portfolio img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+    margin-top: 10px; 
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.contact-info {
+    background-color: #fff;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.contact-info a {
+    color: #ff6347;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ff6347; 
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #e5533d;
+}
+
+
+@media (max-width: 768px) {
+    .contact-info,
+    .contact-form {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .contact-form h2 {
+        font-size: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form button {
+        font-size: 14px;
+    }
+}
